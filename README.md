@@ -23,6 +23,8 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  Go to the repository you want to clone online and copy the address by selecting the green button _"Clone or Download"_ - then make sure Use SSH is selected, and copy the address.  (The https version is not compatable with 2 factor authentication in GitHub). In the terminal, run the following: 
 
  >git clone git@github.com:sandramchung/choc-chip.git
+ 
+ You can also add an optional name at the end of this command if you want to name it something different from the repo version.
 
 ### Looking at repository, editing file, and pushing back to GitHub
 
@@ -39,6 +41,9 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  
  Check the log of commits for the file
  >git log
+
+ See what the differences are between prior commits and the current version.  (The log alpha numeric code is the commit #
+ >git diff ee3945b6213756dccffd98259f4b027d8534046b
  
  Check which repo you are currently connected to
  >git remote -v
@@ -46,6 +51,7 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  Remove the specified (origin) repo
  >git remote remove origin
  
+
 * Edit the .txt file
 
  Open the .txt file and make some changes. You can do this by navigating to the text file on your hard drive, opening, editing, and saving it, or opening it using a command line text editor like nano or vim.  Nano has an on-screen cheat sheet of commands while vim has more power and options but is less user friendly. See Vim-Intro repo for basic vim commands.  Or you can designate a program to open the file like R Studio if editing an R file or a text editor like TextWrangler.
@@ -70,6 +76,7 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  >git add recipe.txt
  
  >git status
+ 
  Now it shows as modified but the color is green
 
  Committing changes - you have to include some note
@@ -78,5 +85,9 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  Pushing changes to online.  You specify the [repository] and [branch] in the git push command.  Since I didn't create a second branch of this repo, the branch is master.  I think the default repository name is origin but I'm not sure about that... 
  >git push origin master
 
+ And now you've edited your first GitHub repo!
+ 
+ You can also update your local copy by pulling the file over again.  This is important if someone else modified and pushed their version of the repo while you were working on your local copy.
+ > git pull origin master
 
 
