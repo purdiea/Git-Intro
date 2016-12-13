@@ -1,4 +1,4 @@
-# Git-Intro
+# GitHub Intro
 Contains useful commands for using GitHub.  See also [Tech Training](https://sites.google.com/a/moveon.org/moveon-wiki/tech/tech-trainings/introduction-to-git-version-control) reference
   
 ### Set up connection, navigate to folder, and clone repository
@@ -54,7 +54,7 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
 
 * Edit the .txt file
 
- Open the .txt file and make some changes. You can do this by navigating to the text file on your hard drive, opening, editing, and saving it, or opening it using a command line text editor like nano or vim.  Nano has an on-screen cheat sheet of commands while vim has more power and options but is less user friendly. See Vim-Intro repo for basic vim commands.  Or you can designate a program to open the file like R Studio if editing an R file or a text editor like TextWrangler.
+ Open the .txt file and make some changes. You can do this by navigating to the text file on your hard drive, opening, editing, and saving it, or opening it using a command line text editor like nano or vim.  Nano has an on-screen cheat sheet of commands while vim has more power and options but is less user friendly. Or you can designate a program to open the file like R Studio if editing an R file or a text editor like TextWrangler.
  >nano recipe.txt 
 
  > or
