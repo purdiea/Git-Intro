@@ -3,6 +3,8 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
   
 ### Set up connection, navigate to folder, and clone repository
 
+#### All commands are run in the terminal 
+
 * Test whether the ssh is running/active (?)
 
  >eval "$(ssh-agent -s)"
