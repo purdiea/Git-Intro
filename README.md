@@ -11,6 +11,7 @@ double return
   tab 
   
 - Set up connection and navigate to folder
+
 Test whether the ssh is running/active (?)
 eval "$(ssh-agent -s)"
 Returns something like Agent pid 1434 which I think means it's active.  
