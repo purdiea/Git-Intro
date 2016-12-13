@@ -1,6 +1,22 @@
 # Git-Intro
 Contains useful commands for using GitHub
 
+single return
+# pound
+- single dash
+-- double dash
+// double backslash
+  tab 
+  
+- Test whether the ssh is running/active (?)
+  eval "$(ssh-agent -s)"
+Returns something like Agent pid 1434 which I think means it's active.  
+
+- Then tell it to connect to the ssh we want
+ssh-add ~/.ssh/github_id_rsa
+- Then enter your passphrase for GitHub (saved in 1Password).  I think in theory I shouldn't have to do this each time but for now I appear to have to do it.
+
+
 - Navigate to directory where you want to store GitHub repositories.
 cd
 /Users/amywhite/Dropbox/MoveOn/GitHub
