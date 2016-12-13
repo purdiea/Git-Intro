@@ -20,7 +20,7 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
 
 * Clone a git-hub repository.  
 
- Go to the repository you want to clone online and copy the address by selecting the green button Clone or Download - then make sure Use SSH is selected, and copy the address.  (The https version is not compatable with 2 factor authentication in GitHub). In the terminal, run the following: 
+ Go to the repository you want to clone online and copy the address by selecting the green button _"Clone or Download"_ - then make sure Use SSH is selected, and copy the address.  (The https version is not compatable with 2 factor authentication in GitHub). In the terminal, run the following: 
 
  >git clone git@github.com:sandramchung/choc-chip.git
 
