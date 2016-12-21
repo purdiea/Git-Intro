@@ -81,6 +81,9 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  
  Now it shows as modified but the color is green
 
+ Before committing any changes, you should pull the directory again.  This will update your local copy by pulling the file over again.  This is important if someone else modified and pushed their version of the repo while you were working on your local copy.
+ > git pull origin master
+
  Committing changes - you have to include some note
  >git commit -m "Don't share with friends"
 
@@ -89,7 +92,24 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
 
  And now you've edited your first GitHub repo!
  
- You can also update your local copy by pulling the file over again.  This is important if someone else modified and pushed their version of the repo while you were working on your local copy.
- > git pull origin master
+### Branching repository
 
+ Check which branch you are currently in.  Master is the "trunk"
+ >git branch
 
+ Create a new branch called pie
+ >git branch pie
+
+ Now checkout this branch.  Which ever branch you have checked out is the branch which will be affected by any edits you make.
+ > git checkout pie
+
+ Alternatively, you can create and checkout a branch in one step.  We'll create a new branch called brownie.
+ > git checkout -b brownie
+
+ Make sure you are in the brownie branch
+ >git branch
+
+ To see the relationship of the trunk and branches you can graph the tree
+ >git log --graph
+
+ Let's create a new branh
