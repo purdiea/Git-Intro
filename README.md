@@ -1,5 +1,5 @@
 # GitHub Intro
-Contains useful commands for using GitHub.  See also [Tech Training](https://sites.google.com/a/moveon.org/moveon-wiki/tech/tech-trainings/introduction-to-git-version-control) reference
+Contains useful commands for using GitHub.  See also [Tech Training](https://sites.google.com/a/moveon.org/moveon-wiki/tech/tech-trainings/introduction-to-git-version-control) reference or https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/ and https://help.github.com/articles/connecting-to-github-with-ssh/ for more about connecting to GitHub via SSH (particularly if you get permission errors when trying to clone a repository.) 
   
 ### Set up connection, navigate to folder, and clone repository
 
