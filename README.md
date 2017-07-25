@@ -13,7 +13,7 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
 
 * Connect to the ssh we want
 
- >ssh-add ~/.ssh/github_id_rsa
+ >ssh-add ~/.ssh/github2_id_rsa
  
  Enter your passphrase for GitHub (created when I created the file github_id_rsa and saved in 1Password). (I think in theory I shouldn't have to do this each time but for now it appears I have to do it.)
 
