@@ -13,9 +13,14 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
 
  Returns something like Agent pid 1434 which I think means it's active.  
 
+* Check which ssh keys exist
+
+> ls -al ~/.ssh
+
 * Connect to the ssh we want
 
- >ssh-add ~/.ssh/github2_id_rsa
+ >ssh-add ~/.ssh/github2_id_rsa 
+ (This is the one on my personal computer, one on Analytics box is id_rsa)
  
  Enter your passphrase for GitHub (created when I created the file github_id_rsa and saved in 1Password). (I think in theory I shouldn't have to do this each time but for now it appears I have to do it.)
 
