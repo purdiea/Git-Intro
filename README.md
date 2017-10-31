@@ -5,6 +5,8 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
 
 #### All commands are run in the terminal 
 
+(Do not log onto ssh moanalytics - just do from your machine)
+
 * Test whether the ssh is running/active (?)
 
  >eval "$(ssh-agent -s)"
