@@ -82,7 +82,10 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  You now need to add, commit, and upload (push) the changes for them to be saved on git hub. 
  
  Adding changes
- >git add recipe.txt
+ >git add recipe.txt 
+ OR
+ >git add -u 
+ Adds all changes for all files excluding untracked files
  
  >git status
  
