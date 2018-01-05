@@ -88,7 +88,7 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  
  >git add -u 
  
- Adds all changes for all files excluding untracked files.  If you have a brand new file that hasn't been loaded to github at all, it won't show up in the red list above but instead will show up in the untracked list below.  To add it to the tracked list, you have to explicitely do git add <file>.  
+ Adds all changes for all files excluding untracked files.  If you have a brand new file that hasn't been loaded to github at all, it won't show up in the red list above but instead will show up in the untracked list below.  To add it to the tracked list, you have to explicitely do git add filename.   
  
  >git status
  
@@ -131,7 +131,7 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  
  ### Untracked Files
  
-  We do not want to load files that contain credential information to the github repository.  To have github ignore these files, we need to add them to the .gitignnore list. 
+  We do not want to load files that contain credential information to the github repository.  To have github ignore these files, we need to add them to the .gitignore list. 
   
   >cd ~
   
