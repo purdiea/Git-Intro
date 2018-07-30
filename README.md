@@ -63,7 +63,7 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
 
 * Edit the .txt file
 
- Open the .txt file and make some changes. You can do this by navigating to the text file on your hard drive, opening, editing, and saving it, or opening it using a command line text editor like nano or vim.  Nano has an on-screen cheat sheet of commands while vim has more power and options but is less user friendly. Or you can designate a program to open the file like R Studio if editing an R file or a text editor like TextWrangler.
+ Open the .txt file and make some changes. You can do this by navigating to the text file on your hard drive, opening, editing, and saving it, or opening it using a command line text editor like nano or vim.  Nano has an on-screen cheat sheet of commands while vim has more power and options but is less user friendly. Or you can designate a program to open the file like R Studio if editing an R file or a text editor like TextWrangler.  The YouTube GitHub for Noobs likes Atom
  >nano recipe.txt 
 
  > or
@@ -73,7 +73,12 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  > or 
  
  > open -a TextWrangler recipe.txt
-
+ 
+ > or
+ 
+ > atom .
+ Opens current repo and you can select which file to edit
+ 
  You can check the status of your changes by using git status.  You'll see that recipe.txt is in red and shown as modified.  
  >git status
 
@@ -100,6 +105,9 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  Committing changes - you have to include some note
  >git commit -m "Don't share with friends"
 
+ You can also add and commit in one step
+ > git commit -am "Don't share with friends"
+ 
  Pushing changes to online.  You specify the [repository] and [branch] in the git push command.  Since I didn't create a second branch of this repo, the branch is master.  I think the default repository name is origin but I'm not sure about that... 
  >git push origin master
 
@@ -125,8 +133,12 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  To see the relationship of the trunk and branches you can graph the tree
  >git log --graph
 
- Let's create a new branch
- .... [didn't complete this]
+ Now make changes to file in the brownie branch and add and commit
+ > vim recipe.txt
+ 
+ > git commit -am "added brownie instructions"
+ 
+ Now merge to master. 
  
  
  ### Untracked Files
