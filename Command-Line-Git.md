@@ -113,6 +113,20 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
 
  And now you've edited your first GitHub repo!
  
+### Comparing local version to GitHub
+
+`git pull` actually does two things - it fetches the data from git hub and merges with the local version.  If you think there may be conflicts and do not want to write over your local changes when pulling from the master, you can just fetch and then compare the files.
+>git fetch origin/master
+
+Then look at the summary of differences across files
+>git diff HEAD..origin/master
+
+### Fixing conflicts
+
+If you try to merge your changes to the master, you may get a conflicts warning if there have been changes made to the master that are not reflected in your local directory.  if that happens, open the file with conflicts and look for the `======` record.  The data above this line is what you have locally and the data below is what is contained in the master.  Delete the information you don't want as well as the line with `====` and the lines with `<<<<` and then save the file and re-merge.
+
+`dd` deletes a line when using VIM
+
 ### Branching repository
 
  Check which branch you are currently in.  Master is the "trunk"
@@ -150,4 +164,10 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
   >vim .gitignore
   
   Add the path and file name that you want to ignore and save file.
+  
+  ### Removing sensitive files from GitHub
+  
+  If a file with authentication data was merged to GitHub, you cannot simply delete the file because its history will still remain.  Instead, you need to follow the complicated process of git-filter-branch described here.
+  https://help.github.com/articles/removing-sensitive-data-from-a-repository/
+
   
