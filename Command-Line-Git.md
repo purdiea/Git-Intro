@@ -116,10 +116,14 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
 ### Comparing local version to GitHub
 
 `git pull` actually does two things - it fetches the data from git hub and merges with the local version.  If you think there may be conflicts and do not want to write over your local changes when pulling from the master, you can just fetch and then compare the files.
->git fetch origin/master
+>git fetch origin master
 
 Then look at the summary of differences across files
 >git diff HEAD..origin/master
+
+If you want to merge the master to whatever branch you have open locally, do 
+>git merge origin master
+
 
 ### Fixing conflicts
 
