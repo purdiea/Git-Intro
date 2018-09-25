@@ -122,7 +122,7 @@ Then look at the summary of differences across files
 >git diff HEAD..origin/master
 
 If you want to merge the master to whatever branch you have open locally, do 
->git merge origin master
+>git merge origin/master
 
 
 ### Fixing conflicts
