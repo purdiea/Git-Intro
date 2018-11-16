@@ -194,21 +194,26 @@ If you try to merge your changes to the master, you may get a conflicts warning 
  Step 2 make copy of settings file with new name: 
  Navigate to desired directory
  > cd scripts/fundraising/monthlymodel
+ 
  > cp file.ext new_file.ext
 
  Step 3 add settings file and copied file name to .gitignore: 
  > vim .gitignore
+ 
  file.ext
  new_file.ext
 
  Step 4 push changes to .gitignore to repo: 
  > git add 
+ 
  > git commit -m “updating .gitignore”
+ 
  > git push origin master
 
  Step 5 remove settings file and all history from github 
  Navigate to home directory
  > cd ~
+ 
  > git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch scripts/fundraising/monthlymodel/file.ext' --prune-empty --tag-name-filter cat -- --all
 
  Step 6 push changes: 
@@ -217,6 +222,7 @@ If you try to merge your changes to the master, you may get a conflicts warning 
  Step 7 move copy of settings back to original file name
  Navigate back to directory
  > cd scripts/fundraising/monthlymodel
+ 
  > mv new_file.ext file.ext
 
  Step 8 verify file no longer exists on Github.com and check git status that local and master are up to date
