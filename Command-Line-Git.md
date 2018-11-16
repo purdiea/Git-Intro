@@ -24,6 +24,10 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  
  Enter your passphrase for GitHub (created when I created the file github_id_rsa and saved in 1Password). (I think in theory I shouldn't have to do this each time but for now it appears I have to do it.)
 
+ If you need to check what SSH keys exist on your repo, visit https://github.com/settings/keys
+ To create a new key, follow instructions here:  https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+ If you do this from the analytics box, it will create a new key that everyone will need to use.  If you do it from your local machine then that is what you will use to connect to github from your local machine.
+ 
 * Navigate to directory where you want to store GitHub repositories.
  >cd /Users/amywhite/Dropbox/MoveOn/GitHub
 
@@ -38,6 +42,16 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
 ### Looking at repository, editing file, and pushing back to GitHub
 
 * Investigate repo
+
+ Checking how you are connected to GitHub
+ >git remote -v
+
+ If this is https: then you won't be able to access using 2 factor authentication.  Instead, you need to be connected via ssh  which will look like this `git@github.com:MoveOnOrg/analytics.git`
+
+ If you are in the https version and what to change, you can run this
+ >git remote set-url origin git@github.com:MoveOnOrg/analytics.git
+
+ The last part `analytics` is the name of the repo.
 
  Look at files within the directory, then open up the repository that you cloned and look in it.
  >ls
@@ -174,4 +188,37 @@ If you try to merge your changes to the master, you may get a conflicts warning 
   If a file with authentication data was merged to GitHub, you cannot simply delete the file because its history will still remain.  Instead, you need to follow the complicated process of git-filter-branch described here.
   https://help.github.com/articles/removing-sensitive-data-from-a-repository/
 
-  
+ Step 1 pull most recent version from github: 
+ > pull origin master
+
+ Step 2 make copy of settings file with new name: 
+ Navigate to desired directory
+ > cd scripts/fundraising/monthlymodel
+ > cp file.ext new_file.ext
+
+ Step 3 add settings file and copied file name to .gitignore: 
+ > vim .gitignore
+ file.ext
+ new_file.ext
+
+ Step 4 push changes to .gitignore to repo: 
+ > git add 
+ > git commit -m “updating .gitignore”
+ > git push origin master
+
+ Step 5 remove settings file and all history from github 
+ Navigate to home directory
+ > cd ~
+ > git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch scripts/fundraising/monthlymodel/file.ext' --prune-empty --tag-name-filter cat -- --all
+
+ Step 6 push changes: 
+ > git push origin --force --all
+
+ Step 7 move copy of settings back to original file name
+ Navigate back to directory
+ > cd scripts/fundraising/monthlymodel
+ > mv new_file.ext file.ext
+
+ Step 8 verify file no longer exists on Github.com and check git status that local and master are up to date
+ > git status
+
