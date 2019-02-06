@@ -96,6 +96,9 @@ Contains useful commands for using GitHub.  See also [Tech Training](https://sit
  You can check the status of your changes by using git status.  You'll see that recipe.txt is in red and shown as modified.  
  >git status
 
+ If you want to undo any changes and revert to the original version of a document, run
+ >git checkout -- recipe.txt
+ 
 * Send changes to GitHub
 
  You now need to add, commit, and upload (push) the changes for them to be saved on git hub. 
